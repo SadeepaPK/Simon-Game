@@ -1,13 +1,13 @@
+var gameover = true;
+
 const elementgreen = document.getElementById("green");
 elementgreen.addEventListener("click", function() {
-    // console.log("Green button clicked!");
     var audio = new Audio('sounds/green.mp3');
     audio.play();
 });
 
 const elementred = document.getElementById("red");
 elementred.addEventListener("click" , function() {
-    // console.log("Red button clicked!");
     var audio = new Audio('sounds/red.mp3');
     audio.play();
 });
@@ -31,7 +31,7 @@ document.addEventListener("keydown" , function(event) {
 }
 });
 
-
+do{
 const number = Math.round((Math.random() * 3 ) + 1);
 console.log("Random number between 1 and 30: " + number);
 
@@ -55,3 +55,5 @@ switch (number) {
     default:
         console.log("Random number is out of range.");
 }
+}
+while (gameover);
